@@ -1,10 +1,15 @@
+main{
+    margin: 0;
+}
 .section_blogs{
-    @media screen and (max-width:500px) {
    margin: 0;
-    }
+
+    
 }
 .blog_post_card
 {
+   border-radius: 0;
+
    
     background-color: rgba(255, 255, 255, 0.781);
     .published_date
@@ -15,4 +20,10 @@
     {
         color:rgba(0, 0, 0, 0.739);
     }
+}
+
+footer#footer
+{
+    border-radius: 0;
+    margin: 0;
 }

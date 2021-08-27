@@ -1,10 +1,13 @@
-@media screen and (max-width: 500px) {
-  .section_blogs {
-    margin: 0;
-  }
+main {
+  margin: 0;
+}
+
+.section_blogs {
+  margin: 0;
 }
 
 .blog_post_card {
+  border-radius: 0;
   background-color: rgba(255, 255, 255, 0.781);
 }
 
@@ -14,5 +17,10 @@
 
 .blog_post_card p.desc {
   color: rgba(0, 0, 0, 0.739);
+}
+
+footer#footer {
+  border-radius: 0;
+  margin: 0;
 }
 /*# sourceMappingURL=blog.css.map */
