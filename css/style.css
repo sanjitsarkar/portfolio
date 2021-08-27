@@ -200,6 +200,7 @@ header.header {
 }
 
 header.header img.menu {
+  cursor: pointer;
   display: none;
 }
 
@@ -212,6 +213,7 @@ header.header img.menu {
 }
 
 header.header img.close {
+  cursor: pointer;
   display: none;
 }
 
