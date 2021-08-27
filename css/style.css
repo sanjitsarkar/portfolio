@@ -7,8 +7,35 @@
 }
 
 body {
+  overflow-x: hidden;
   background: #e1e9e9;
   font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 0%;
+  }
+  body header.header {
+    gap: 1rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: .5rem 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  body header.header .title_secondary {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  body header.header img {
+    margin-left: .5rem;
+  }
+  body main, body footer#footer {
+    margin: .5em;
+  }
 }
 
 button, .btn {
@@ -98,6 +125,14 @@ a {
   text-decoration: none;
 }
 
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
 #active {
   background-color: white;
   color: teal;
@@ -125,6 +160,14 @@ a {
   }
 }
 
+header.header img.menu, header.header img.close {
+  width: 3rem;
+  height: 3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 header.header {
   background: teal;
   display: -webkit-box;
@@ -139,10 +182,48 @@ header.header {
   padding: 1.5rem;
   -webkit-box-shadow: 0 1rem 1em rgba(0, 0, 0, 0.157);
           box-shadow: 0 1rem 1em rgba(0, 0, 0, 0.157);
+  position: relative;
+}
+
+header.header img.menu {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  header.header img.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+header.header img.close {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  header.header img.close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 header.header .title_secondary {
   color: white;
+}
+
+@media screen and (max-width: 500px) {
+  header.header nav.right {
+    left: 0;
+    display: none;
+    margin: 0;
+    position: absolute;
+    width: 100vw;
+    padding: 1.5rem;
+    bottom: -23vh;
+    background-color: rgba(0, 0, 0, 0.801);
+  }
 }
 
 header.header nav.right ul {
@@ -150,6 +231,19 @@ header.header nav.right ul {
   display: -ms-flexbox;
   display: flex;
   gap: 2em;
+}
+
+@media screen and (max-width: 500px) {
+  header.header nav.right ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+  }
 }
 
 header.header nav.right ul li a {
@@ -167,7 +261,7 @@ header.header nav.right ul li a:hover, header.header nav.right ul li a .active {
 }
 
 main {
-  margin: 1.5rem;
+  margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,42 +376,6 @@ main .technology_section ul.tech_list li .tech_icon {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-main .technology_section ul.tech_list li .html {
-  background: url("../img/icons/html.svg");
-}
-
-main .technology_section ul.tech_list li .css {
-  background: url("../img/icons/css.svg");
-}
-
-main .technology_section ul.tech_list li .javascript {
-  background: url("../img/icons/javascript.svg");
-}
-
-main .technology_section ul.tech_list li .expressjs {
-  background: url("../img/icons/express.svg");
-}
-
-main .technology_section ul.tech_list li .reactjs {
-  background: url("../img/icons/reactjs.svg");
-}
-
-main .technology_section ul.tech_list li .nodejs {
-  background: url("../img/icons/nodejs.svg");
-}
-
-main .technology_section ul.tech_list li .mongodb {
-  background: url("../img/icons/mongodb.svg");
-}
-
-main .technology_section ul.tech_list li .android {
-  background: url("../img/icons/android.svg");
-}
-
-main .technology_section ul.tech_list li .flutter {
-  background: url("../img/icons/flutter.svg");
 }
 
 main .project_section {
@@ -446,11 +504,11 @@ main .section_blogs .blog_list .blog_card {
 }
 
 footer#footer {
-  margin: 1.5rem;
+  margin: 1rem;
 }
 
 footer#footer ul {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,7 +516,7 @@ footer#footer ul {
 }
 
 footer#footer ul li a img {
-  width: 3rem;
+  width: 2rem;
   height: 3rem;
   background-size: cover;
   background-repeat: no-repeat;

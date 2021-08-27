@@ -15,9 +15,34 @@ $tertiary_color:rgb(255, 255, 255);
     box-sizing: border-box;
 }
 body{
-    // font-size: 62.55%;
+    overflow-x: hidden;
     background:$secondary_color;
     font-family: 'Poppins', sans-serif;
+    @media screen and (max-width:500px) {
+        font-size: 0%;
+        header.header
+        {
+            gap: $padding_small;
+            justify-content: flex-start;
+            padding: .5rem 0;
+            box-shadow: none;
+            .title_secondary
+            {
+                order: 4;
+            }
+            img
+            {
+                margin-left:.5rem;
+            }
+          
+        }
+       
+        main,footer#footer
+        {
+            margin: .5em;
+
+        }
+    }
 }
 button,.btn{
     padding:.5em .8em;
@@ -124,6 +149,14 @@ a{  cursor: pointer;
     background-color: rgb(255, 255, 255);
     color:$primary_color; 
 }
+.hide
+{
+    display: none !important;
+}
+.show
+{
+    display: block !important;
+}
 #active{
 @include active_link_style();
 }
@@ -139,11 +172,18 @@ a{  cursor: pointer;
 
         @media screen and (max-width:900px) {
             flex-basis: 100%;
-        
+  
         }
     }
 }
-
+%icon_style
+{
+    width: 3rem;
+    height: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
 header.header{
     background: $primary_color;
     display: flex;
@@ -151,12 +191,53 @@ header.header{
     align-items: center;
     padding: $padding_medium;
     box-shadow: 0 1rem 1em rgba(0, 0, 0, 0.157);
+    position: relative;
+        img.menu
+        {
+            @extend %icon_style;
+            display: none;
+    @media screen and (max-width:500px) {
+        display: flex;
+
+    }
+      
+            
+        }
+
+        img.close
+        {
+            @extend %icon_style;
+            display: none;
+            
+            @media screen and (max-width:500px) {
+                display: flex;
+        } 
+        }
+    
     .title_secondary
     {
         color:white;
     }
     nav.right{
+        @media screen and (max-width:500px) {
+            left: 0;
+       display: none;
+        margin: 0;
+       position: absolute;
+       width: 100vw;
+       padding: $padding_medium;
+       bottom: -23vh;
+
+  background-color: rgba(0, 0, 0, 0.801);
+}
         ul{
+            @media screen and (max-width:500px) {
+//    margin-top: $padding_large;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+        
+            }
             display: flex;
             gap: 2em;
             li{
@@ -179,7 +260,7 @@ header.header{
 }
 
 main{
-    margin: $padding_medium;
+    margin: $padding_small;
     display: flex;
     flex-direction: column;
     gap:1em;
@@ -250,51 +331,51 @@ color:white;
                         background-repeat: no-repeat;
                         background-position:center;
                     }
-                        .html
-                        {
-                        background: url("../img/icons/html.svg");
+                        // .html
+                        // {
+                        // background: url("../img/icons/html.svg");
 
-                        }
-                        .css
-                        {
-                            background: url("../img/icons/css.svg");
+                        // }
+                        // .css
+                        // {
+                        //     background: url("../img/icons/css.svg");
 
-                        }
-                        .javascript
-                        {
-                            background: url("../img/icons/javascript.svg");
+                        // }
+                        // .javascript
+                        // {
+                        //     background: url("../img/icons/javascript.svg");
 
-                        }
-                        .expressjs
-                        {
-                            background: url("../img/icons/express.svg");
+                        // }
+                        // .expressjs
+                        // {
+                        //     background: url("../img/icons/express.svg");
 
-                        }
-                        .reactjs
-                        {
-                            background: url("../img/icons/reactjs.svg");
+                        // }
+                        // .reactjs
+                        // {
+                        //     background: url("../img/icons/reactjs.svg");
 
-                        }
-                        .nodejs
-                        {
-                            background: url("../img/icons/nodejs.svg");
+                        // }
+                        // .nodejs
+                        // {
+                        //     background: url("../img/icons/nodejs.svg");
 
-                        }
-                        .mongodb
-                        {
-                            background: url("../img/icons/mongodb.svg");
+                        // }
+                        // .mongodb
+                        // {
+                        //     background: url("../img/icons/mongodb.svg");
 
-                        }
-                        .android
-                        {
-                            background: url("../img/icons/android.svg");
+                        // }
+                        // .android
+                        // {
+                        //     background: url("../img/icons/android.svg");
 
-                        }
-                        .flutter
-                        {
-                            background: url("../img/icons/flutter.svg");
+                        // }
+                        // .flutter
+                        // {
+                        //     background: url("../img/icons/flutter.svg");
 
-                        }
+                        // }
                     
                 }
             }
@@ -390,10 +471,10 @@ color:white;
     }
 }
 footer#footer{
-    margin:$padding_medium;
+    margin:$padding_small;
     ul
     {
-        margin-top: $padding_medium;
+        margin-top: $padding_small;
         display: flex;
         gap: 2rem;
 
@@ -402,7 +483,7 @@ footer#footer{
             a{
                 img
                 {
-                    width: 3rem;
+                    width: 2rem;
                 height: 3rem;
                 background-size: cover;
                 background-repeat: no-repeat;
