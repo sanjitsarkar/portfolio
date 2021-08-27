@@ -5,7 +5,7 @@ $padding_small:1rem;
 $primary_color:teal;
 $light_white_color:rgba(255, 255, 255, 0.863);
 $violet_color:rgb(99, 18, 206);
-$crimson_color:rgb(255, 255, 255);
+$crimson_color:rgb(255, 11, 72);
 $deep_blue_color:rgb(8, 134, 207);
 $secondary_color:rgb(225, 233, 233);
 $tertiary_color:rgb(255, 255, 255);
@@ -80,16 +80,26 @@ font-size: .9rem;
 }
 
 .btn_primary{
-color:white;
-background: teal;
+// color:white;
+background: white;
 font-weight: 500;
+transition: all .3s ease-in-out;
+&:hover
+{
+    box-shadow: 0 4px .5rem rgba(0, 0, 0, 0.281);
+}
 
 }
 .btn_secondary{
 font-weight: 500;
 background: transparent;
-border: 1px solid teal;
-color:teal;
+border: 1px solid white;
+color:white;
+transition: all .3s ease-in-out;
+&:hover
+{
+    box-shadow: 0 4px .5rem rgba(0, 0, 0, 0.281);
+}
 }
 .color_primary{
     color:$primary_color;
@@ -104,7 +114,7 @@ background: white;
 {
 font-weight: 300;
 font-size: .9rem;
-color: rgb(63, 63, 63);
+color: rgba(255, 255, 255, 0.856);
 }
 .center
 {
@@ -114,7 +124,8 @@ p.desc{
     margin: $padding_small 0;
     font-weight: 400;
     font-size: .95rem;
-    color: rgba(53, 52, 52, 0.897);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.904);
 
 }
 @mixin title_center {
@@ -145,9 +156,48 @@ ul{
 a{  cursor: pointer;
     text-decoration: none;
 }
+
+@mixin card_style_2 {
+    &:nth-of-type(4n+1)
+    {
+       background: $deep_blue_color;
+       .btn_primary
+       {
+           color: $deep_blue_color;
+       }
+    }
+    &:nth-of-type(4n+2)
+    {
+       background: $violet_color;
+       .btn_primary
+       {
+           color: $violet_color;
+       }
+    }
+    &:nth-of-type(4n+3)
+    {
+       background: $primary_color;
+       .btn_primary
+       {
+           color: $primary_color;
+       }
+    }
+    &:nth-of-type(4n+4)
+    {
+       background: $crimson_color;
+       .btn_primary
+       {
+           color: $crimson_color;
+       }
+    }  
+}
 @mixin active_link_style {
-    background-color: rgb(255, 255, 255);
-    color:$primary_color; 
+    // background-color: rgb(255, 255, 255);
+    color:$tertiary_color;
+    // font-size: 101%; 
+    // font-weight: 600;
+    opacity: .8;
+    border-bottom: 1px solid white;
 }
 .hide
 {
@@ -419,6 +469,17 @@ color:white;
    
         .code_card
         {
+            @include card_style_2();
+            
+  
+            // &:nth-of-type(n+2)
+            // {
+            //    background: #82e1ee;
+            // }
+            // &:nth-of-type(n+3)
+            // {
+            //    background: #8289ee;
+            // }
             // flex-basis: 30.5%;
             flex:1 1 30%;
             @media screen and (max-width:600px) {
@@ -426,22 +487,21 @@ color:white;
             }
             .title_secondary
             {
-              
+              color:white;
             }
-         
             .cta_btns
             {
                 display: flex;
                 gap: .8rem;
                 a{
-                    .live_project
-                    {
+                    // .live_project
+                    // {
+                    //    background: white;
+                    // }
+                    // .live_project
+                    // {
 
-                    }
-                    .live_project
-                    {
-
-                    }
+                    // }
                 }
             }
         }
@@ -471,13 +531,15 @@ color:white;
             // }
            .blog_card
            {
+            @include card_style_2();
+
             flex:1 1 40%;
             @media screen and (max-width:600px) {
                 flex-basis: 100%;
             }
                .title_secondary
                {
-                 
+                 color: white;
                }
                .published_date
                {
@@ -492,7 +554,12 @@ color:white;
     }
 }
 footer#footer{
+    background: rgb(31, 52, 61);
     margin:$padding_small;
+    .title_secondary
+    {
+        color:white;
+    }
     @media screen and (max-width:500px) {
         
         text-align: center;
@@ -538,5 +605,18 @@ footer#footer{
             }
 
         }
+    }
+}
+
+.blog_post_card
+{
+    background-color: rgba(255, 255, 255, 0.781);
+    .published_date
+    {
+        color:rgba(0, 0, 0, 0.698);
+    }
+    p.desc
+    {
+        color:rgba(0, 0, 0, 0.739);
     }
 }

@@ -75,16 +75,29 @@ button, .btn {
 }
 
 .btn_primary {
-  color: white;
-  background: teal;
+  background: white;
   font-weight: 500;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn_primary:hover {
+  -webkit-box-shadow: 0 4px 0.5rem rgba(0, 0, 0, 0.281);
+          box-shadow: 0 4px 0.5rem rgba(0, 0, 0, 0.281);
 }
 
 .btn_secondary {
   font-weight: 500;
   background: transparent;
-  border: 1px solid teal;
-  color: teal;
+  border: 1px solid white;
+  color: white;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn_secondary:hover {
+  -webkit-box-shadow: 0 4px 0.5rem rgba(0, 0, 0, 0.281);
+          box-shadow: 0 4px 0.5rem rgba(0, 0, 0, 0.281);
 }
 
 .color_primary {
@@ -102,7 +115,7 @@ button, .btn {
 .published_date {
   font-weight: 300;
   font-size: .9rem;
-  color: #3f3f3f;
+  color: rgba(255, 255, 255, 0.856);
 }
 
 .center {
@@ -113,7 +126,8 @@ p.desc {
   margin: 1rem 0;
   font-weight: 400;
   font-size: .95rem;
-  color: rgba(53, 52, 52, 0.897);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.904);
 }
 
 ul {
@@ -134,8 +148,9 @@ a {
 }
 
 #active {
-  background-color: white;
-  color: teal;
+  color: white;
+  opacity: .8;
+  border-bottom: 1px solid white;
 }
 
 .row {
@@ -262,8 +277,9 @@ header.header nav.right ul li a {
 }
 
 header.header nav.right ul li a:hover, header.header nav.right ul li a .active {
-  background-color: white;
-  color: teal;
+  color: white;
+  opacity: .8;
+  border-bottom: 1px solid white;
 }
 
 main {
@@ -484,11 +500,47 @@ main .section_codes .code_list .code_card {
           flex: 1 1 30%;
 }
 
+main .section_codes .code_list .code_card:nth-of-type(4n+1) {
+  background: #0886cf;
+}
+
+main .section_codes .code_list .code_card:nth-of-type(4n+1) .btn_primary {
+  color: #0886cf;
+}
+
+main .section_codes .code_list .code_card:nth-of-type(4n+2) {
+  background: #6312ce;
+}
+
+main .section_codes .code_list .code_card:nth-of-type(4n+2) .btn_primary {
+  color: #6312ce;
+}
+
+main .section_codes .code_list .code_card:nth-of-type(4n+3) {
+  background: teal;
+}
+
+main .section_codes .code_list .code_card:nth-of-type(4n+3) .btn_primary {
+  color: teal;
+}
+
+main .section_codes .code_list .code_card:nth-of-type(4n+4) {
+  background: #ff0b48;
+}
+
+main .section_codes .code_list .code_card:nth-of-type(4n+4) .btn_primary {
+  color: #ff0b48;
+}
+
 @media screen and (max-width: 600px) {
   main .section_codes .code_list .code_card {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
+}
+
+main .section_codes .code_list .code_card .title_secondary {
+  color: white;
 }
 
 main .section_codes .code_list .code_card .cta_btns {
@@ -518,6 +570,38 @@ main .section_blogs .blog_list .blog_card {
           flex: 1 1 40%;
 }
 
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+1) {
+  background: #0886cf;
+}
+
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+1) .btn_primary {
+  color: #0886cf;
+}
+
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+2) {
+  background: #6312ce;
+}
+
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+2) .btn_primary {
+  color: #6312ce;
+}
+
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+3) {
+  background: teal;
+}
+
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+3) .btn_primary {
+  color: teal;
+}
+
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+4) {
+  background: #ff0b48;
+}
+
+main .section_blogs .blog_list .blog_card:nth-of-type(4n+4) .btn_primary {
+  color: #ff0b48;
+}
+
 @media screen and (max-width: 600px) {
   main .section_blogs .blog_list .blog_card {
     -ms-flex-preferred-size: 100%;
@@ -525,8 +609,17 @@ main .section_blogs .blog_list .blog_card {
   }
 }
 
+main .section_blogs .blog_list .blog_card .title_secondary {
+  color: white;
+}
+
 footer#footer {
+  background: #1f343d;
   margin: 1rem;
+}
+
+footer#footer .title_secondary {
+  color: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -557,5 +650,17 @@ footer#footer ul li a img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.blog_post_card {
+  background-color: rgba(255, 255, 255, 0.781);
+}
+
+.blog_post_card .published_date {
+  color: rgba(0, 0, 0, 0.698);
+}
+
+.blog_post_card p.desc {
+  color: rgba(0, 0, 0, 0.739);
 }
 /*# sourceMappingURL=style.css.map */
