@@ -52,6 +52,11 @@ button,.btn{
     cursor: pointer;
     font-weight: 500;
 font-size: .9rem;
+transition: all .3s ease-in-out;
+&:hover
+{
+    box-shadow: 0 4px .5rem rgba(0, 0, 0, 0.281);
+}
 }
 .title_primary
 {
@@ -83,11 +88,7 @@ font-size: .9rem;
 // color:white;
 background: white;
 font-weight: 500;
-transition: all .3s ease-in-out;
-&:hover
-{
-    box-shadow: 0 4px .5rem rgba(0, 0, 0, 0.281);
-}
+
 
 }
 .btn_secondary{
@@ -95,11 +96,7 @@ font-weight: 500;
 background: transparent;
 border: 1px solid white;
 color:white;
-transition: all .3s ease-in-out;
-&:hover
-{
-    box-shadow: 0 4px .5rem rgba(0, 0, 0, 0.281);
-}
+
 }
 .color_primary{
     color:$primary_color;
@@ -608,15 +605,3 @@ footer#footer{
     }
 }
 
-.blog_post_card
-{
-    background-color: rgba(255, 255, 255, 0.781);
-    .published_date
-    {
-        color:rgba(0, 0, 0, 0.698);
-    }
-    p.desc
-    {
-        color:rgba(0, 0, 0, 0.739);
-    }
-}

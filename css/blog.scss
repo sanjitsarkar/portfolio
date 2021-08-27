@@ -1,0 +1,18 @@
+.section_blogs{
+    @media screen and (max-width:500px) {
+   margin: 0;
+    }
+}
+.blog_post_card
+{
+   
+    background-color: rgba(255, 255, 255, 0.781);
+    .published_date
+    {
+        color:rgba(0, 0, 0, 0.698);
+    }
+    p.desc
+    {
+        color:rgba(0, 0, 0, 0.739);
+    }
+}
