@@ -168,6 +168,12 @@ header.header img.menu, header.header img.close {
   background-position: center;
 }
 
+@media screen and (max-width: 500px) {
+  .sect {
+    margin: 1.5rem;
+  }
+}
+
 header.header {
   background: teal;
   display: -webkit-box;

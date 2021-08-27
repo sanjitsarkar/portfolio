@@ -18,3 +18,4 @@ nav.addEventListener("click",()=>{
     close.classList.toggle("hide")
     menu.classList.toggle("hide")
 })
+

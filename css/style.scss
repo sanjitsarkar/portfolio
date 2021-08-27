@@ -184,6 +184,12 @@ a{  cursor: pointer;
     background-repeat: no-repeat;
     background-position:center;
 }
+.sect
+{
+    @media screen and (max-width:500px) {
+        margin: $padding_medium;
+        }
+}
 header.header{
     background: $primary_color;
     display: flex;
@@ -444,6 +450,8 @@ color:white;
 
     .section_blogs
     {
+
+       
         .title_primary
         {
             @include title_center();
@@ -456,7 +464,11 @@ color:white;
             gap:$padding_small;
        
             // flex-basis: 30.5%;
-               
+            // .blogs_card
+            // {   width: 90%;
+            //     height: 40vh;
+            //     background-image: linear-gradient(transparent,$primary_color),url('../img/coder.svg');
+            // }
            .blog_card
            {
             flex:1 1 40%;
