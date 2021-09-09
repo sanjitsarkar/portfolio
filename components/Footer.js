@@ -9,8 +9,8 @@ const Footer = () => {
             <li className="github social"><a rel="noopener noreferrer" href="https://github.com/sanjitsarkar" target="_blank">
             <Image width="40%" height="40%" src="/img/icons/github.svg" alt="" srcSet=""/>
             </a></li>
-            <li className="aedin social"><a rel="noopener noreferrer" href="https://www.aedin.com/in/sanjit-sarkar/"  target="_blank">
-                <Image width="40%" height="40%" src="/img/icons/aedin.svg" alt="" srcSet=""/>
+            <li className="linkedin social"><a rel="noopener noreferrer" href="https://www.linkedin.com/in/sanjit-sarkar/"  target="_blank">
+                <Image width="40%" height="40%" src="/img/icons/linkedin.svg" alt="" srcSet=""/>
         
             </a></li>
             <li className="twitter social"><a rel="noopener noreferrer" href="https://twitter.com/XanjitXarkar" target="_blank">
