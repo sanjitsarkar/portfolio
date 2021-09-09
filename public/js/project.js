@@ -16,12 +16,15 @@ const initProject = async()=>{
     cta_btns.classList.add('cta_btns')
     const live_project_btn = document.createElement('a')
     live_project_btn.classList.add('btn_primary','btn','live_project')
+    live_project_btn.setAttribute('target', '_blank')
     const view_source_btn = document.createElement('a')
     live_project_btn.textContent = "Live Project"
     live_project_btn.href = _project.live_url
     view_source_btn.classList.add('btn_secondary','btn','view_source')
     view_source_btn.textContent = "View Source"
     view_source_btn.href = _project.source_url
+    view_source_btn.setAttribute('target', '_blank')
+
 
     
     cta_btns.appendChild(live_project_btn)
