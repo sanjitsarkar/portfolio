@@ -38,12 +38,29 @@ if (querySnapshot.exists()) {
     getBlog();
   }, [id]);
   return (
+      <>
+         <Head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sanjitsarkar.tk/" />
+    <link rel="canonical" href="https://sanjitsarkar.vercel.app/" />
+    <meta name="keywords" content="sanjit sarkar, portfolio, nodejs, fullstack,frontend, backend,india,assam,bvec,cse"/>
+    <meta name="author" content="Sanjit Sarkar"/>
+    <meta
+    title={blog.title}
+      name="description"
+      content={blog.blogDesc}
+    
+      />
+      </Head>
     <main className="blog_info">
       <section className="section_blogs sect">
         {loading && <h1 className="loading">Loading...</h1>}
         {blog && <BlogInfo blog={blog} />}
       </section>
     </main>
+    </>
   );
 };
 
