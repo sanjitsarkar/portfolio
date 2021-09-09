@@ -2,9 +2,9 @@ import Link from 'next/link'
 const Header = () => {
     return (
         <header className="header">
-        <img className="menu " src="./img/icons/menu.svg"/>
-        <img className="close hide" src="./img/icons/close.svg"/>
-        <a href="/" className="title_secondary">Sanjit Sarkar</a>
+        <img className="menu " src="/img/icons/menu.svg"/>
+        <img className="close hide" src="/img/icons/close.svg"/>
+<h1 className="title_secondary"><Link href="/">Sanjit Sarkar</Link></h1>
         <nav className="right">
             <ul>
             <li><Link href="/">Home</Link></li>

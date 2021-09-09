@@ -6,7 +6,7 @@ const initBlog = async()=>{
     blogs.forEach((_blog,i) => {
         const blog  = document.createElement('div')
         blog.classList.add('card','blog_card')
-        // blog.style.background = "url('../img/coder.svg')"
+        // blog.style.background = "url('./img/coder.svg')"
         const title = document.createElement('h1')
         title.classList.add('title_secondary')
         const published_date = document.createElement('h4')

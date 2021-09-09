@@ -1,5 +1,6 @@
 import {  doc, getDoc } from "firebase/firestore";
 import { useRouter } from "next/dist/client/router";
+import Head from "next/head";
 import { useEffect,useState } from "react";
 import BlogInfo from "../../components/BlogInfo";
 import { db } from "../../firebase/firebase";

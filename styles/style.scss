@@ -17,6 +17,10 @@ $tertiary_color:rgb(255, 255, 255);
 a{
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
+}
+li.social{
+    cursor: pointer;
 }
 body{
     overflow-x: hidden;
@@ -254,7 +258,11 @@ header.header{
     align-items: center;
     padding: $padding_medium;
     box-shadow: 0 1rem 1em rgba(0, 0, 0, 0.157);
-    position: relative;
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    z-index: 99;
         img.menu
         {
             cursor: pointer;
@@ -636,6 +644,7 @@ main.blog_info
 {
     min-height: 70vh;
     margin: 0;
+    margin-top: 10vh;
 .section_blogs{
    margin: 0;
 
@@ -717,4 +726,7 @@ main.not_found
           transform: translatey(-.15em);
         }
     }
+}
+.body{
+    margin-top: 14vh;
 }

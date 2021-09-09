@@ -30,7 +30,7 @@ const Projects = () => {
         <div className="code_list">
         {loading && (<h1 className="loading">Loading...</h1>)}
           {projects &&
-            projects.map((project) => <ProjectCard project={project} />)}
+            projects.map((project) => <ProjectCard project={project} key={project.id}/>)}
             {!loading && !projects.length && <h1>No project available</h1>}
         </div>
       </section>

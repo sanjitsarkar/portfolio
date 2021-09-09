@@ -29,7 +29,7 @@ const Blogs = () => {
         <h1 className="title_primary">See Blogs</h1>
         <div className="blog_list">
             {loading && (<h1 className="loading">Loading...</h1>)}
-          {blogs && blogs.map((blog) => <BlogCard blog={blog}/>)}
+          {blogs && blogs.map((blog) => <BlogCard blog={blog} key={blog.id}/>)}
           {!loading && !blogs.length && <h>No blogs available</h>}
 
         </div>

@@ -9,6 +9,11 @@
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+li.social {
+  cursor: pointer;
 }
 
 body {
@@ -205,7 +210,11 @@ header.header {
   padding: 1.5rem;
   -webkit-box-shadow: 0 1rem 1em rgba(0, 0, 0, 0.157);
           box-shadow: 0 1rem 1em rgba(0, 0, 0, 0.157);
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 99;
 }
 
 header.header img.menu {
@@ -677,6 +686,7 @@ main.blogs {
 main.blog_info {
   min-height: 70vh;
   margin: 0;
+  margin-top: 10vh;
 }
 
 main.blog_info .section_blogs {
@@ -774,5 +784,9 @@ main.not_found p {
     -webkit-transform: translatey(-0.15em);
             transform: translatey(-0.15em);
   }
+}
+
+.body {
+  margin-top: 14vh;
 }
 /*# sourceMappingURL=style.css.map */

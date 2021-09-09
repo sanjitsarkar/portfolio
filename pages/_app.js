@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
     <meta
     title="Sanjit Sarkar"
       name="description"
-      content="It's a portfolio site for Sanjit Sarkar"
+      content="I'm a Full Stack Developer with MERN, Android Developer with Flutter and Kotlin."
     
       />
       </Head>
