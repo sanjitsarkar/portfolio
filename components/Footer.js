@@ -6,19 +6,19 @@ const Footer = () => {
             Connect with me on
         </h1>
         <ul>
-            <li className="github social"><a href="https://github.com/sanjitsarkar" target="_blank">
+            <li className="github social"><a rel="noopener noreferrer" href="https://github.com/sanjitsarkar" target="_blank">
             <Image width="40%" height="40%" src="/img/icons/github.svg" alt="" srcSet=""/>
             </a></li>
-            <li className="aedin social"><a href="https://www.aedin.com/in/sanjit-sarkar/"  target="_blank">
+            <li className="aedin social"><a rel="noopener noreferrer" href="https://www.aedin.com/in/sanjit-sarkar/"  target="_blank">
                 <Image width="40%" height="40%" src="/img/icons/aedin.svg" alt="" srcSet=""/>
         
             </a></li>
-            <li className="twitter social"><a href="https://twitter.com/XanjitXarkar" target="_blank">
+            <li className="twitter social"><a rel="noopener noreferrer" href="https://twitter.com/XanjitXarkar" target="_blank">
                 <Image width="40%" height="40%" src="/img/icons/twitter.svg" alt="" srcSet=""/>
             
             </a></li>
             <li className="codepen social">
-                <a href="https://codepen.io/sanjitbrwnsmith"  target="_blank">
+                <a rel="noopener noreferrer" href="https://codepen.io/sanjitbrwnsmith"  target="_blank">
                 <Image width="40%" height="40%" src="/img/icons/codepen.svg" alt="" srcSet=""/>
             </a></li>
         </ul>

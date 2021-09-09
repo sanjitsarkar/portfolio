@@ -9,12 +9,12 @@ const ProjectCard = ({project}) => {
       <p className="desc">{project.desc}</p>
       <div className="cta_btns">
           <div className="btn_primary btn live_project">
-        <a  href={project.liveUrl} target="_blank">
+        <a rel="noopener noreferrer"  href={project.liveUrl} target="_blank">
           Live Project
         </a> 
         </div>
         <div className="btn_secondary btn view_source">
-        <a  href={project.sourceUrl} target="_blank">
+        <a rel="noopener noreferrer"  href={project.sourceUrl} target="_blank">
           View Source
         </a> 
         </div>
