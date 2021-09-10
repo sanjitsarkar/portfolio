@@ -1,7 +1,7 @@
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import ProjectCard from "../../components/ProjectCard";
-import db from "../../firebase/db";
+import { db } from "../../firebase/firebase";
 const Projects = () => {
   const [loading, setLoading] = useState(false);
 

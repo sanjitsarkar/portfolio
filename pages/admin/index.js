@@ -1,8 +1,6 @@
-import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import { useContext, useEffect } from "react";
-import Logout from "../../components/Logout";
 import { AuthContext } from "../../store/AuthStore";
 const AdminDashboard = () => {
   const { isAuth, setAuth, user, setUser } = useContext(AuthContext);

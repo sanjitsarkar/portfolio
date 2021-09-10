@@ -332,8 +332,9 @@ main .about_section {
   background: #0886cf;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   main .about_section {
+    margin-top: 1rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

@@ -5,8 +5,7 @@ import dynamic from "next/dynamic";
 import { useContext, useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import useInput from "../../../components/hooks/useInput";
-import db from "../../../firebase/db";
-import { storage } from "../../../firebase/storage";
+import { storage, db } from "../../../firebase/firebase";
 import { AuthContext } from "../../../store/AuthStore";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 const AdminBlogs = () => {

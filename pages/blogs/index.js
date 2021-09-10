@@ -1,7 +1,7 @@
 import { collection, getDocs, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import BlogCard from "../../components/BlogCard";
-import db from "../../firebase/db";
+import {db} from "../../firebase/firebase";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);

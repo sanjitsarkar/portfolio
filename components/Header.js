@@ -28,10 +28,14 @@ const Header = () => {
               <Link href="/">Home</Link>
             </li>
             <li onClick={() => setShow(false)}>
-              <Link href="/projects">Projects</Link>
+              <Link prefetch={true} href="/projects">
+                Projects
+              </Link>
             </li>
             <li onClick={() => setShow(false)}>
-              <Link href="/blogs">Blogs</Link>
+              <Link prefetch={true} href="/blogs">
+                Blogs
+              </Link>
             </li>
             {isAuth && (
               <>

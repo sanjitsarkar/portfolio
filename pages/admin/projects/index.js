@@ -3,9 +3,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useRouter } from "next/dist/client/router";
 import { useContext, useEffect, useState } from "react";
 import useInput from "../../../components/hooks/useInput";
-import Logout from "../../../components/Logout";
-import db from "../../../firebase/db";
-import { storage } from "../../../firebase/storage";
+import { storage,db } from "../../../firebase/firebase";
 import { AuthContext } from "../../../store/AuthStore";
 const AdminProjects = () => {
   const router = useRouter();

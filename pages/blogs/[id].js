@@ -3,7 +3,7 @@ import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import BlogInfo from "../../components/BlogInfo";
-import db from "../../firebase/db";
+import {db} from "../../firebase/firebase";
 import "../../styles/blog.module.css";
 
 const Blog = () => {

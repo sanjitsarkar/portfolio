@@ -2,9 +2,8 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/dist/client/router";
 import { useContext, useEffect, useState } from "react";
 import useInput from "../../components/hooks/useInput";
-import { auth } from "../../firebase/auth";
+import { auth } from "../../firebase/firebase";
 import { AuthContext } from "../../store/AuthStore";
-
 const Login = () => {
   const { isAuth, setAuth, user, setUser } = useContext(AuthContext);
   const [email, setEmail, bindEmail, resetEmail] = useInput("");
@@ -17,7 +16,6 @@ const Login = () => {
       router.replace("/admin");
     }
   }, [isAuth]);
-  const auth = getAuth();
   const handleLogin = (e) => {
     setLoading(true);
     e.preventDefault();

@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { auth } from "../firebase/auth";
+import { auth } from "../firebase/firebase";
 import { AuthContext } from "../store/AuthStore";
 
 const Logout = () => {
-  const { isAuth,setAuth } = useContext(AuthContext);
+  const { isAuth, setAuth } = useContext(AuthContext);
   const logout = async () => {
     await auth.signOut();
     setAuth(false);
