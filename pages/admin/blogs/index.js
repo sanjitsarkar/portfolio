@@ -21,6 +21,7 @@ const AdminBlogs = () => {
   const [editorHtml, setEditorHtml] = useInput("");
   const [theme, setTheme] = useInput("snow");
 
+  const [url, setUrl, bindUrl, resetUrl] = useInput("");
   const [tags, setTags, bindTags, resetTags] = useInput("");
   const [img, setImg] = useState("");
   const [loading, setLoading] = useState(false);
@@ -44,6 +45,7 @@ const AdminBlogs = () => {
         publishedDate: serverTimestamp(),
         img: imgUrl,
         tags: tags.toString().split(","),
+        url,
       };
       console.log(blog);
       const result = await addDoc(collection(db, "blogs"), blog);
@@ -131,6 +133,7 @@ const AdminBlogs = () => {
                   placeholder="Blog tags separated by comma"
                   {...bindTags}
                 />
+                <input type="text" placeholder="Blog url" {...bindUrl} />
               </div>
 
               <ReactQuill

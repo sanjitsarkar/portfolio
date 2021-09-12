@@ -628,6 +628,9 @@ main .section_blogs .blog_list .blog_card {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40%;
           flex: 1 1 40%;
@@ -996,5 +999,12 @@ main.dashboard .card .btn {
   main.dashboard .card .btn {
     font-size: 1rem;
   }
+}
+
+section.desc {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
 }
 /*# sourceMappingURL=style.css.map */

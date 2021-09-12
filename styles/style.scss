@@ -521,7 +521,7 @@ main {
 
       .blog_card {
         @include card_style_2();
-
+        justify-content: space-between;
         flex: 1 1 40%;
         @media screen and (max-width: 600px) {
           flex-basis: 100%;
@@ -775,4 +775,10 @@ main.dashboard {
       }
     }
   }
+}
+section.desc {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
 }
