@@ -3,7 +3,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useRouter } from "next/dist/client/router";
 import { useContext, useEffect, useState } from "react";
 import useInput from "../../../components/hooks/useInput";
-import { storage,db } from "../../../firebase/firebase";
+import { storage, db } from "../../../firebase/firebase";
 import { AuthContext } from "../../../store/AuthStore";
 const AdminProjects = () => {
   const router = useRouter();
@@ -52,7 +52,7 @@ const AdminProjects = () => {
         title,
         desc,
         publishedDate: Timestamp.fromDate(new Date(publishedDate)),
-        priority: Number(priority) && 0,
+        priority: Number(priority),
         liveUrl,
         sourceUrl,
         img: imgUrl,
