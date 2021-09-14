@@ -106,8 +106,8 @@ const Body = () => {
           <span>
             <h1 className="title_secondary">Projects</h1>
             <p className="section_desc">
-              I like href showcase my work and thus, you can see my projects
-              hosted online
+              I like to showcase my work and thus, you can see my projects
+              hosted online.
             </p>
           </span>
           <div className="btn_white btn color_primary">
@@ -118,8 +118,8 @@ const Body = () => {
           <span>
             <h1 className="title_secondary">Blogs</h1>
             <p className="section_desc">
-              I am also working on some technical and non techincal blogs. I
-              like href document my journey of learning.
+              I am also working on some technical and non-technical blogs. I
+              like to document my journey of learning.
             </p>
           </span>
           <div className="btn_white btn color_violet">
