@@ -25,7 +25,7 @@ const BlogCard = ({ blog }) => {
           <Link href={`/blogs/${id}`}>Read More</Link>
         </div> */}
       <div className="btn btn_primary read_more">
-        <a href={blog.url} target="_blank">
+        <a href={blog.url} target="_blank" rel="noopener noreferrer">
           Read More
         </a>
       </div>
